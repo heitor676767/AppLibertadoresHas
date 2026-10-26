@@ -4,8 +4,7 @@ using System.Text;
 
 namespace AppLibertadoresHAS.ViewModels
 {
-    public class CadastroJogadorViewModel : BaseViewModel
+    internal class LocalizacaoViewModel
     {
-
     }
 }
