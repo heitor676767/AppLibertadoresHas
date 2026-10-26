@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppLibertadoresHAS.ViewModels
 {
-    internal class LocalizacaoViewModel
+    public class LocalizacaoViewModel
     {
     }
 }

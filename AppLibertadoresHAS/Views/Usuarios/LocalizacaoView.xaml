@@ -4,5 +4,15 @@
              xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
              x:Class="AppLibertadoresHAS.Views.Usuarios.LocalizacaoView"
              Title="Localização">
-    <maps:Map x:Name="mapa" />
+    <maps:Map x:Name="mapa" ItemsSource="{Binding MeuMapa}"
+              MapType="Hybrid" IsShowingUser="true"
+              IsZoomEnabled="True" IsTrafficEnabled="True">
+        <maps:Map.ItemTemplate>
+            <DataTemplate>
+                <maps:Pin Location="{Biding Location}"
+                          Address="{Binding Address}"
+                          Label="{Binding Label}"/>
+            </DataTemplate>
+        </maps:Map.ItemTemplate>
+    </maps:Map>
 </ContentPage>
