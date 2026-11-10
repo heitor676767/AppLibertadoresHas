@@ -32,7 +32,7 @@ namespace AppLibertadoresHAS.ViewModels
             try
             {
                 Location location = new Location(-23.5200241d, -46.596498d);
-                Pin pinEtec = new Pin();
+                Pin pinEtec = new Pin()
                 {
                     Type = PinType.Place,
                     Label = "Etec Horácio",

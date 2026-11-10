@@ -9,7 +9,7 @@
               IsZoomEnabled="True" IsTrafficEnabled="True">
         <maps:Map.ItemTemplate>
             <DataTemplate>
-                <maps:Pin Location="{Biding Location}"
+                <maps:Pin Location="{Binding Location}"
                           Address="{Binding Address}"
                           Label="{Binding Label}"/>
             </DataTemplate>

@@ -10,7 +10,6 @@ public partial class CadastroView : ContentPage
 		InitializeComponent();
 
 		viewModel = new UsuarioViewModel();
-		viewModel.InicializarMapa();
 		BindingContext = viewModel;
 	}
 }

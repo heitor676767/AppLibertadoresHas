@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AppLibertadoresHAS.Views.Usuarios;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AppLibertadoresHAS
 {
@@ -11,7 +12,8 @@ namespace AppLibertadoresHAS
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            
+            return new Window(new NavigationPage(new LoginView()));
         }
     }
 }
