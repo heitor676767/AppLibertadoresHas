@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <g fill="#000000">
+    <!-- prancheta -->
+    <path d="M37 9h54c5 0 9 4 9 9v91c0 5-4 9-9 9H37c-5 0-9-4-9-9V18c0-5 4-9 9-9zm0 9v91h54V18H37z"/>
+    <path d="M48 4h32c4 0 7 3 7 7v9H41v-9c0-4 3-7 7-7z"/>
+    <!-- cabeçalho -->
+    <path d="M43 29h42v5H43z"/>
+    <!-- linhas e placares -->
+    <path d="M43 43h12v12H43zM61 46h24v5H61z"/>
+    <path d="M43 63h12v12H43zM61 66h24v5H61z"/>
+    <path d="M43 83h12v12H43zM61 86h24v5H61z"/>
+    <!-- pequenas bolas nos jogos -->
+    <circle cx="49" cy="49" r="2.5" fill="#ffffff"/>
+    <circle cx="49" cy="69" r="2.5" fill="#ffffff"/>
+    <circle cx="49" cy="89" r="2.5" fill="#ffffff"/>
+  </g>
+</svg>

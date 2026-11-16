@@ -8,18 +8,54 @@
     xmlns:partidas="clr-namespace:AppLibertadoresHAS.Views.Partidas"
     Title="AppLibertadoresHAS">
 
-    <ShellContent
-        Title="Localização"
-        ContentTemplate="{DataTemplate usuarios:LocalizacaoView}"
-        Route="localizacao" />
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{OnPlatform Android=130, iOS=200}"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <FlexLayout Grid.Row="0" Direction="Row" AlignItems="Center" >
+                    <Border Padding="0" StrokeShape="RoundRectangle 40" StrokeThickness="0" HeightRequest="80" WidthRequest="80" >
+                        <Image Source="has_logo_transparente_negativo.svg"/>
+                    </Border>
+                    <VerticalStackLayout Padding="10,0,0,0" Spacing="0">
+                        <Label Text="App Libertadores HAS" FontAttributes="Bold" FontSize="Large"/>
+                        <Label Text="Disciplina PAM-II"/>
+                    </VerticalStackLayout>
+                </FlexLayout>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Title="Localização"
+            ContentTemplate="{DataTemplate usuarios:LocalizacaoView}" 
+            Icon="menulocalizacao.svg"
+            Route="localizacao" />
 
-    <ShellContent
-        Title="Partidas"
-        ContentTemplate="{DataTemplate partidas:TabelaView}"
-        Route="tabela" />
+        <ShellContent
+            Title="Partidas"
+            ContentTemplate="{DataTemplate partidas:TabelaView}"
+            Icon="menutabela.svg"
+            Route="tabela" />
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="home.svg"
+            Route="MainPage" />
+        
+        <Tab Title="Info" Route="info" Icon="info.svg">
+            <ShellContent Title="Sobre" Route="sobre" ContentTemplate="{DataTemplate local:AboutView}"/>
+            <ShellContent Title="Descrição" Route="desc" ContentTemplate="{DataTemplate local:DescriptionView}"/>
+        </Tab>
+    </FlyoutItem>
+    <ShellContent Title="Sair" Icon="exit.svg" ContentTemplate="{DataTemplate usuarios:LoginView}"
+              Shell.FlyoutBehavior="Disabled"/>
+
+    <Shell.FlyoutFooter>
+        <Label x:Name="lblLogin" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+    </Shell.FlyoutFooter>
 </Shell>
